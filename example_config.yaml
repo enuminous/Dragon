@@ -1,0 +1,23 @@
+machine: DRAGON-M1
+version: 1.0.0
+
+n_regimes: 3
+development_fraction: 0.55
+transition_horizon: 10
+
+temporal_horizons:
+  - 3
+  - 7
+  - 23
+
+regime_method: kmeans
+
+primary_metric:
+  name: brier_score
+  comparison: dragon_vs_raw_state
+
+interpretation:
+  clusters_are_operational_regimes_not_proven_physical_attractors: true
+
+freeze:
+  hash: sha256

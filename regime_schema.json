@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DRAGON Regime Record",
+  "type": "object",
+  "required": [
+    "machine_version",
+    "timestamp",
+    "system_id",
+    "regime_label",
+    "transition_score"
+  ],
+  "properties": {
+    "machine_version": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string"
+    },
+    "system_id": {
+      "type": "string"
+    },
+    "regime_label": {
+      "type": "integer"
+    },
+    "transition_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "assigned_distance": {
+      "type": "number"
+    },
+    "escape_pressure": {
+      "type": "number"
+    },
+    "recursive_attractor_strength": {
+      "type": "number"
+    }
+  }
+}
